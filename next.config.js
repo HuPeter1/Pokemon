@@ -2,6 +2,17 @@
 
 const nextConfig = {
   reactStrictMode: false,
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'raw.githubusercontent.com',
+        port: '',
+        pathname: '/PokeAPI/sprites/master/**',
+        search: '',
+      },
+    ],
+  },
 };
 
 module.exports = nextConfig;

@@ -11,6 +11,7 @@ export type PokemonData = {
     front_shiny_female: string | null;
   };
   abilities: [PokemonAbilityData];
+  types: [PokemonTypeData];
 };
 
 type PokemonAbilityData = {
@@ -20,4 +21,12 @@ type PokemonAbilityData = {
   };
   is_hidden: boolean;
   slot: number;
+}
+
+type PokemonTypeData = {
+  slot: number;
+  type: {
+    name: string;
+    url: string;
+  }
 }

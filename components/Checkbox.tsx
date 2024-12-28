@@ -1,4 +1,4 @@
-import { Checkbox } from "@nextui-org/react";
+import { Checkbox } from "@nextui-org/react"
 
 const CustomCheckbox = () => {
   return (
@@ -13,7 +13,7 @@ const CustomCheckbox = () => {
       <Checkbox value="london">London</Checkbox>
       <Checkbox value="tokyo">Tokyo</Checkbox>
     </Checkbox.Group>
-  );
-};
+  )
+}
 
-export default CustomCheckbox;
+export default CustomCheckbox

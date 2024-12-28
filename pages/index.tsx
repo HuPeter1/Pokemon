@@ -1,12 +1,13 @@
-import Head from "next/head";
-import Image from "next/image";
-import styles from "../styles/Home.module.css";
-import dynamic from "next/dynamic";
-import { Avatar, Pagination } from "@nextui-org/react";
+import { Avatar, Pagination } from "@nextui-org/react"
+import dynamic from "next/dynamic"
+import Head from "next/head"
+import Image from "next/image"
 
-const CustomCheckbox = dynamic(() => import("../components/Checkbox"));
-const CustomTable = dynamic(() => import("../components/Table"));
-const CustomCollapse = dynamic(() => import("../components/Collapse"));
+import styles from "../styles/Home.module.css"
+
+const CustomCheckbox = dynamic(() => import("../components/Checkbox"))
+const CustomTable = dynamic(() => import("../components/Table"))
+const CustomCollapse = dynamic(() => import("../components/Collapse"))
 
 export default function Home() {
   return (
@@ -49,5 +50,5 @@ export default function Home() {
         </a>
       </footer>
     </div>
-  );
+  )
 }

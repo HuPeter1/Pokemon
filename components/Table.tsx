@@ -1,4 +1,4 @@
-import { Table } from "@nextui-org/react";
+import { Table } from "@nextui-org/react"
 
 const CustomTable = () => {
   return (
@@ -37,7 +37,7 @@ const CustomTable = () => {
         </Table.Row>
       </Table.Body>
     </Table>
-  );
-};
+  )
+}
 
-export default CustomTable;
+export default CustomTable
