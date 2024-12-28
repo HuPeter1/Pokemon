@@ -17,9 +17,14 @@ export const PokemonPage = () => {
   const params = useParams();
   const pokemonName = params.pokemonName;
   const [pokemonData, setPokemonData] = useState<PokemonData>()
+  const [isFetching, setIsFetching] = useState(true);
 
   useEffect(() => {
-    client.get(`pokemon/${pokemonName}`).then((res) => { setPokemonData(res.data)})
+    const getPokemon = async () => {
+      await client.get(`pokemon/${pokemonName}`).then((res) => { setPokemonData(res.data)});
+      setIsFetching(false);
+    }
+    void getPokemon();
   }, []);
 
   return (
@@ -27,7 +32,7 @@ export const PokemonPage = () => {
       <Grid alignContent={"center"} minH="100vh" p={3}>
         <VStack>
           {
-          pokemonData?
+          !isFetching && pokemonData ?
           <>
           <Image height={"200px"} width={"200px"} src={pokemonData.sprites.front_default} />
           <Text>

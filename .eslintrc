@@ -18,7 +18,8 @@
     "project": ["tsconfig.json"]
   },
   "rules": {
-    "comma-dangle": 2,
-    "no-trailing-spaces": "error"
+    "comma-dangle": 0,
+    "no-trailing-spaces": "error",
+    "no-unused-vars": "warn"
   }
 }
