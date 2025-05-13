@@ -21,6 +21,22 @@ export const fetchPokemonNames = async () => {
   }}))
 }
 
+export const formatPokemonName = (rawName: string) => {
+  const name = rawName.toUpperCase();
+  const splitName = name.split("-");
+  let newName: string
+  if (splitName.length >= 2) {
+    if (splitName[1] == "MEGA") {
+      splitName[1] = splitName[0];
+      splitName[0] = "MEGA"
+      newName = splitName.join(" ");
+    }
+    else { newName = name; }
+  }
+  else { newName = name; }
+  return newName;
+}
+
 const fetchTypeData = async (typeid: string) => {
   const data = await client.get<TypeData>(`type/${typeid}`).then(res => res.data)
   return data

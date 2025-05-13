@@ -9,7 +9,6 @@ const nextConfig = {
         hostname: 'raw.githubusercontent.com',
         port: '',
         pathname: '/PokeAPI/sprites/master/**',
-        search: '',
       },
     ],
   },
